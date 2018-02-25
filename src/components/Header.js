@@ -9,7 +9,7 @@ const Header = () => (
       <h4>Wilfried Barth</h4>
     </Link>
     <Link className={styles.navBarLink} to="/til">
-      <h4>Today I Learned</h4>
+      <h4>Today I Learned (TIL)</h4>
     </Link>
   </nav>
 );

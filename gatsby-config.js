@@ -11,6 +11,7 @@ module.exports = {
         path: `${__dirname}/src`,
       },
     },
+    'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
