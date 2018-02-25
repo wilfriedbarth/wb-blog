@@ -1,0 +1,42 @@
+{
+  "name": "wb-blog",
+  "description": "Wilfried Barth's Blog",
+  "version": "1.0.0",
+  "author": "Wilfried Barth <wilfried.barth.prof@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.214",
+    "gatsby-link": "^1.6.37",
+    "gatsby-plugin-react-helmet": "^2.0.5",
+    "gatsby-plugin-typography": "^1.7.14",
+    "gatsby-source-filesystem": "^1.5.23",
+    "react-helmet": "^5.2.0",
+    "typography-theme-sutro": "^0.15.10"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.1.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.1.0",
+    "flow-bin": "^0.66.0",
+    "prettier": "^1.10.2",
+    "stylelint": "^9.1.1",
+    "stylelint-config-standard": "^18.1.0",
+    "stylelint-order": "^0.8.1"
+  }
+}
