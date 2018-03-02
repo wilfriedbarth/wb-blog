@@ -4,13 +4,6 @@ module.exports = {
     siteUrl: 'https://www.wilfriedbarth.com',
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'src',
-        path: `${__dirname}/src`,
-      },
-    },
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     {
@@ -19,5 +12,13 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'src',
+        path: `${__dirname}/src`,
+      },
+    },
+    'gatsby-transformer-remark',
   ],
 };
