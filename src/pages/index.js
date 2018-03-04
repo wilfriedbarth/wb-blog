@@ -2,9 +2,9 @@ import React from 'react';
 
 const IndexPage = () => (
   <div>
-    <h2>Welcome!</h2>
+    <h2>Hi!</h2>
     <p>
-      Hi! I'm Wilfried Barth, a web developer living in Chicago, IL, USA. I
+      I'm Wilfried Barth, a web developer living in Chicago, IL, USA. I
       currently work at <a href="https://www.expedia.com/">Expedia</a> as a
       Software Engineer I in the Media Solutions Group.
     </p>
