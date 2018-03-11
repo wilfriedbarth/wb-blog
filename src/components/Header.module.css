@@ -1,27 +1,29 @@
-.navBar {
-  border-bottom: 1px solid black;
+.header {
   display: flex;
 }
 
-.navBarBrand {
-  align-items: center;
-  border-right: 1px solid black;
-  color: black;
-  display: flex;
-  padding: 15px 30px;
-  text-decoration: none !important;
+.logoLink {
+  margin: 0.5rem;
 }
 
-.navBarBrand h4 {
-  margin: 0;
+.logoLink:visited, .logoLink:hover {
+  text-decoration: none;
 }
 
-.navBarLink {
-  color: black;
-  padding: 15px 15px;
-  text-decoration: none !important;
+.logo {
+  border-radius: 5rem;
+  margin-bottom: 0;
+  width: 10rem;
 }
 
-.navBarLink h4 {
-  margin: 0;
+.tagline {
+}
+
+.taglineHeader {
+  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.taglineSummary {
+  margin-top: 0.5rem;
 }

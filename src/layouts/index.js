@@ -3,9 +3,10 @@ import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
 import styles from './index.module.css';
+import 'prismjs/themes/prism.css';
 
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div className={styles.container}>
     <Helmet
       meta={[
         {
@@ -14,10 +15,10 @@ const TemplateWrapper = ({ children }) => (
         },
         { name: 'keywords', content: 'Wilfried, Barth, Tech, Blog' },
       ]}
-      title="Wilfried Barth"
+      title="WB Blog"
     />
     <Header />
-    <div className={styles.container}>{children()}</div>
+    <main className={styles.content}>{children()}</main>
   </div>
 );
 

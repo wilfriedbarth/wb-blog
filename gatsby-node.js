@@ -9,7 +9,12 @@ exports.modifyBabelrc = ({ babelrc }) => ({
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators;
   if (node.internal.type === 'MarkdownRemark') {
-    const slug = createFilePath({ node, getNode, basePath: 'pages' });
+    const slug = createFilePath({
+      node,
+      getNode,
+      basePath: 'pages',
+      trailingSlash: false,
+    });
     createNodeField({
       node,
       name: 'slug',

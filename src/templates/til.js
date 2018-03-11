@@ -9,18 +9,18 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        description
       }
     }
   }
 `;
 
 export default ({
-  data: { markdownRemark: { frontmatter: { title, date }, html } },
+  data: { markdownRemark: { frontmatter: { title, description }, html } },
 }) => (
   <div className={styles.container}>
-    <h1>{title}</h1>
-    <h2>{date}</h2>
+    <h2>{title}</h2>
+    <i>{description}</i>
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </div>
 );
