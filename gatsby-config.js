@@ -24,7 +24,7 @@ module.exports = {
         name: 'WB Blog',
         short_name: 'WB Blog',
         start_url: '/',
-        theme_color: '#a2466c',
+        theme_color: '#212472',
       },
     },
     'gatsby-plugin-offline',
