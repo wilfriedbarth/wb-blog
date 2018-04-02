@@ -1,17 +1,27 @@
 import React from 'react';
 import Link from 'gatsby-link';
 
+import logo from './WB.jpg';
 import styles from './Header.module.css';
 
 const Header = () => (
-  <nav className={styles.navBar}>
-    <Link className={styles.navBarBrand} to="/">
-      <h4>Wilfried Barth</h4>
-    </Link>
-    <Link className={styles.navBarLink} to="/til">
-      <h4>Today I Learned (TIL)</h4>
-    </Link>
-  </nav>
+  <header className={styles.header}>
+    <img alt="logo" className={styles.logo} src={logo} />
+    <div className={styles.tagline}>
+      <Link className={styles.taglineHeaderLink} to="/">
+        <h2 className={styles.taglineHeader}>Wilfried Barth</h2>
+      </Link>
+      <p className={styles.taglineSummary}>
+        Software Engineer @{' '}
+        <a
+          className={styles.expediaLink}
+          href="https://advertising.expedia.com/"
+        >
+          Expedia Group Media Solutions
+        </a>
+      </p>
+    </div>
+  </header>
 );
 
 export default Header;

@@ -1,0 +1,8 @@
+a:link {
+  background-image: none;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

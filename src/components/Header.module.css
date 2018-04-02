@@ -1,27 +1,23 @@
-.navBar {
-  border-bottom: 1px solid black;
+.header {
   display: flex;
+  margin: 20px 0 0 0;
 }
 
-.navBarBrand {
-  align-items: center;
-  border-right: 1px solid black;
+.logo {
+  border-radius: 50%;
+  height: 55px;
+  margin: 0 10px 0 0;
+  width: 55px;
+}
+
+.taglineHeaderLink:hover {
   color: black;
-  display: flex;
-  padding: 15px 30px;
-  text-decoration: none !important;
 }
 
-.navBarBrand h4 {
+.taglineHeader {
   margin: 0;
 }
 
-.navBarLink {
-  color: black;
-  padding: 15px 15px;
-  text-decoration: none !important;
-}
-
-.navBarLink h4 {
+.taglineSummary {
   margin: 0;
 }
