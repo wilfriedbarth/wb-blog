@@ -6,15 +6,19 @@ import styles from './Header.module.css';
 
 const Header = () => (
   <header className={styles.header}>
-    <Link className={styles.logoLink} to="/">
-      <img alt="logo" className={styles.logo} src={logo} />
-    </Link>
+    <img alt="logo" className={styles.logo} src={logo} />
     <div className={styles.tagline}>
-      <h2 className={styles.taglineHeader}>Wilfried Barth</h2>
+      <Link className={styles.taglineHeaderLink} to="/">
+        <h2 className={styles.taglineHeader}>Wilfried Barth</h2>
+      </Link>
       <p className={styles.taglineSummary}>
-        I'm a web developer living in Chicago, IL, USA, currently working at
-        Expedia as a Software Engineer I. I strive to constantly expand my
-        technical knowledge and share it with others.
+        Software Engineer @{' '}
+        <a
+          className={styles.expediaLink}
+          href="https://advertising.expedia.com/"
+        >
+          Expedia Group Media Solutions
+        </a>
       </p>
     </div>
   </header>

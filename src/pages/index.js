@@ -26,33 +26,28 @@ export const query = graphql`
   }
 `;
 
-export default ({ data: { allMarkdownRemark: { totalCount, edges } } }) => (
-  <div>
-    <h2>Today I Learned (TIL) - {totalCount} TILs</h2>
-    <section className={styles.tilContainer}>
-      {edges.map(
-        ({
-          node: {
-            id,
-            fields: { slug },
-            frontmatter: { title, description, date },
-          },
-        }) => (
-          <article key={id}>
-            <header>
-              <h3>
-                <Link className={styles.tilLink} to={slug}>
-                  {title}
-                </Link>
-              </h3>
-              <h5>{date}</h5>
-            </header>
-            <main>
-              <p>{description}</p>
-            </main>
-          </article>
-        ),
-      )}
-    </section>
-  </div>
+export default ({ data: { allMarkdownRemark: { edges } } }) => (
+  <section className={styles.tilContainer}>
+    {edges.map(
+      ({
+        node: {
+          id,
+          fields: { slug },
+          frontmatter: { title, description, date },
+        },
+      }) => (
+        <article key={id}>
+          <header>
+            <Link className={styles.tilLink} to={slug}>
+              <h3 className={styles.tilTitle}>{title}</h3>
+            </Link>
+            <h5 className={styles.tilDate}>{date}</h5>
+          </header>
+          <main>
+            <p>{description}</p>
+          </main>
+        </article>
+      ),
+    )}
+  </section>
 );

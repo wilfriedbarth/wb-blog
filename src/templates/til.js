@@ -19,8 +19,9 @@ export default ({
   data: { markdownRemark: { frontmatter: { title, description }, html } },
 }) => (
   <div className={styles.container}>
-    <h2>{title}</h2>
-    <i>{description}</i>
+    <h2 className={styles.tilTitle}>{title}</h2>
+    <p className={styles.tilDescription}>{description}</p>
+    <hr className={styles.tilDivider} />
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </div>
 );

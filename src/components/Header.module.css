@@ -1,29 +1,23 @@
 .header {
   display: flex;
-}
-
-.logoLink {
-  margin: 0.5rem;
-}
-
-.logoLink:visited, .logoLink:hover {
-  text-decoration: none;
+  margin: 20px 0 0 0;
 }
 
 .logo {
-  border-radius: 5rem;
-  margin-bottom: 0;
-  width: 10rem;
+  border-radius: 50%;
+  height: 55px;
+  margin: 0 10px 0 0;
+  width: 55px;
 }
 
-.tagline {
+.taglineHeaderLink:hover {
+  color: black;
 }
 
 .taglineHeader {
-  margin-bottom: 0.5rem;
-  margin-top: 0.75rem;
+  margin: 0;
 }
 
 .taglineSummary {
-  margin-top: 0.5rem;
+  margin: 0;
 }

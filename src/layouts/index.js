@@ -2,7 +2,9 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import styles from './index.module.css';
+import './index.css';
 import 'prismjs/themes/prism.css';
 
 const TemplateWrapper = ({ children }) => (
@@ -19,6 +21,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     <main className={styles.content}>{children()}</main>
+    <Footer />
   </div>
 );
 
