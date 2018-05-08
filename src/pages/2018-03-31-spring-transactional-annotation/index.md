@@ -1,6 +1,6 @@
 ---
 title: "Spring @Transactional Annotation"
-description: "Learn how to write custom transactional methods on a CrudRepository."
+description: "TIL how to write custom transactional methods on a CrudRepository."
 date: "2018-03-31"
 ---
 
