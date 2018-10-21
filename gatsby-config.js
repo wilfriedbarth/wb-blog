@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    description: "Wilfried Barth's Blog",
     title: 'WB Blog',
+    description: 'Musings on the state of the techniverse',
     siteUrl: 'https://www.wilfriedbarth.com',
   },
   plugins: [
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-flow',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -29,7 +30,6 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
@@ -47,17 +47,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-images',
           {
             resolve: 'gatsby-remark-prismjs',
             options: { classPrefix: 'language-' },
           },
-          'gatsby-remark-responsive-iframe',
         ],
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-netlify',
   ],
 };
