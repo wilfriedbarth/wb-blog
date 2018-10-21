@@ -1,10 +1,7 @@
 import React from 'react';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import {
-  faGithubSquare,
-  faLinkedin,
-} from '@fortawesome/fontawesome-free-brands';
-import { faEnvelopeSquare } from '@fortawesome/fontawesome-free-solid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import styles from './Footer.module.css';
 
@@ -17,7 +14,7 @@ const Footer = () => (
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/wilfriedbarth/">
+        <a href="https://www.linkedin.com/in/wilfriedbarth">
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
       </li>

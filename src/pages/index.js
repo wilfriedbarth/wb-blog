@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Layout from '../components/layout';
+import { graphql, Link } from 'gatsby';
 
 import styles from './index.module.css';
 
@@ -26,28 +27,34 @@ export const query = graphql`
   }
 `;
 
-export default ({ data: { allMarkdownRemark: { edges } } }) => (
-  <section className={styles.tilContainer}>
-    {edges.map(
-      ({
-        node: {
-          id,
-          fields: { slug },
-          frontmatter: { title, description, date },
-        },
-      }) => (
-        <article key={id}>
-          <header>
-            <Link className={styles.tilLink} to={slug}>
-              <h3 className={styles.tilTitle}>{title}</h3>
-            </Link>
-            <h5 className={styles.tilDate}>{date}</h5>
-          </header>
-          <main>
-            <p>{description}</p>
-          </main>
-        </article>
-      ),
-    )}
-  </section>
+export default ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
+  <Layout>
+    <section className={styles.tilContainer}>
+      {edges.map(
+        ({
+          node: {
+            id,
+            fields: { slug },
+            frontmatter: { title, description, date },
+          },
+        }) => (
+          <article key={id}>
+            <header>
+              <Link className={styles.tilLink} to={slug}>
+                <h3 className={styles.tilTitle}>{title}</h3>
+              </Link>
+              <h5 className={styles.tilDate}>{date}</h5>
+            </header>
+            <main>
+              <p>{description}</p>
+            </main>
+          </article>
+        ),
+      )}
+    </section>
+  </Layout>
 );
