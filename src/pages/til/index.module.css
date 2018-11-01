@@ -1,0 +1,17 @@
+.tilContainer {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.tilLink {
+  color: black;
+}
+
+.tilTitle {
+  margin: 0;
+}
+
+.tilDate {
+  margin-top: 10px;
+}

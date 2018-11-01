@@ -1,60 +1,27 @@
 import React from 'react';
 import Layout from '../components/layout';
-import { graphql, Link } from 'gatsby';
 
-import styles from './index.module.css';
-
-/* eslint-disable-next-line */
-export const query = graphql`
-  query tilIndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            description
-          }
-          excerpt
-        }
-      }
-    }
-  }
-`;
-
-export default ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => (
+export default () => (
   <Layout>
-    <section className={styles.tilContainer}>
-      {edges.map(
-        ({
-          node: {
-            id,
-            fields: { slug },
-            frontmatter: { title, description, date },
-          },
-        }) => (
-          <article key={id}>
-            <header>
-              <Link className={styles.tilLink} to={slug}>
-                <h3 className={styles.tilTitle}>{title}</h3>
-              </Link>
-              <h5 className={styles.tilDate}>{date}</h5>
-            </header>
-            <main>
-              <p>{description}</p>
-            </main>
-          </article>
-        ),
-      )}
+    <section>
+      <h2>Hey there!</h2>
+      <p>
+        I am a software engineer at{' '}
+        <a href="https://www.expediagroup.com/">Expedia Group</a> in Chicago,
+        working in the{' '}
+        <a href="https://advertising.expedia.com/">Media Solutions</a> division.
+        At work, I am hacking in Typescript, Java, and Scala these days. Outside
+        work, I am dabbling in functional languages such as Clojure and Haskell.
+      </p>
+      <p>
+        Drop me a line at{' '}
+        <a href="mailto:wilfried.barth.prof@gmail.com">
+          wilfried.barth.prof@gmail.com
+        </a>
+        , connect with me on{' '}
+        <a href="https://www.linkedin.com/in/wilfriedbarth/">LinkedIn</a>, or
+        check me out on <a href="https://github.com/wilfriedbarth">Github</a>.
+      </p>
     </section>
   </Layout>
 );

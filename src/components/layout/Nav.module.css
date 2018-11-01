@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  margin-top: 12px;
+}
+
+.navLink {
+  margin: 0 12px;
+}
+
+.navLink:first-child {
+  margin-left: 0;
+}
+
+.navLink:last-child {
+  margin-right: 0;
+}

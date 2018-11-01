@@ -13,11 +13,8 @@ const Header = () => (
       </Link>
       <p className={styles.taglineSummary}>
         Software Engineer @{' '}
-        <a
-          className={styles.expediaLink}
-          href="https://advertising.expedia.com/"
-        >
-          Expedia Group Media Solutions
+        <a className={styles.expediaLink} href="https://www.expediagroup.com/">
+          Expedia Group
         </a>
       </p>
     </div>
