@@ -6,14 +6,13 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-flow',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         anonymize: true,
         head: false,
         respectDNT: true,
-        trackingId: 'UA-82462198-2',
+        trackingId: process.env.GA_TRACKING_ID,
       },
     },
     {
@@ -39,8 +38,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src',
-        path: `${__dirname}/src`,
+        name: 'posts',
+        path: `${__dirname}/src/pages/posts`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'til',
+        path: `${__dirname}/src/pages/til`,
       },
     },
     {

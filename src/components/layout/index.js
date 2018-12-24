@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
 import Header from './Header';
+import Nav from './Nav';
 import Footer from './Footer';
 import styles from './index.module.css';
 import './index.css';
@@ -33,6 +34,7 @@ const Layout = ({ children }) => (
           title={data.site.siteMetadata.title}
         />
         <Header />
+        <Nav />
         <main className={styles.content}>{children}</main>
         <Footer />
       </div>
