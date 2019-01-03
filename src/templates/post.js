@@ -1,8 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '../components/layout';
-import styles from './til.module.css';
+import styles from './post.module.css';
 
 /* eslint-disable-next-line */
 export const query = graphql`
@@ -18,19 +19,29 @@ export const query = graphql`
 `;
 
 export default ({
+  location: { pathname },
   data: {
     markdownRemark: {
       frontmatter: { title, description },
       html,
     },
   },
-}) => (
-  <Layout>
-    <div className={styles.container}>
-      <h2 className={styles.tilTitle}>{title}</h2>
-      <p className={styles.tilDescription}>{description}</p>
-      <hr className={styles.tilDivider} />
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
-  </Layout>
-);
+}) => {
+  const disqusConfig = {
+    url: `https://www.wilfriedbarth.com${pathname}`,
+    identifier: pathname,
+    title,
+  };
+
+  return (
+    <Layout>
+      <div className={styles.container}>
+        <h2 className={styles.postTitle}>{title}</h2>
+        <p className={styles.postDescription}>{description}</p>
+        <hr className={styles.postDivider} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+        <DiscussionEmbed config={disqusConfig} shortname="wbarth" />
+      </div>
+    </Layout>
+  );
+};
