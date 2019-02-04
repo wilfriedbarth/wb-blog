@@ -9,7 +9,7 @@ export const query = graphql`
   query postsIndexQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "posts" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___date], order: ASC }
     ) {
       totalCount
       edges {
