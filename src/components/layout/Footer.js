@@ -24,7 +24,7 @@ const Footer = () => (
         </a>
       </li>
     </ul>
-    <small className={styles.copyright}>&copy; 2018 Wilfried Barth</small>
+    <small className={styles.copyright}>&copy; 2019 Wilfried Barth</small>
   </footer>
 );
 
