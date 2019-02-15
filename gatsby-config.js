@@ -1,8 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'WB Blog',
     description: 'Musings on the state of the techniverse',
-    siteUrl: 'https://www.wilfriedbarth.com',
+    title: 'WB Blog',
   },
   plugins: [
     'gatsby-plugin-catch-links',
@@ -48,6 +47,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
-    'gatsby-plugin-remove-serviceworker'
+    'gatsby-plugin-remove-serviceworker',
   ],
 };

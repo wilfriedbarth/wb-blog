@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '../components/layout';
+import SEO from '../components/common/Seo';
 import styles from './post.module.css';
 
 /* eslint-disable-next-line */
@@ -35,6 +36,7 @@ export default ({
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <div className={styles.container}>
         <h2 className={styles.postTitle}>{title}</h2>
         <p className={styles.postDescription}>{description}</p>

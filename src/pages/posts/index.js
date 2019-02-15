@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from '../../components/layout';
+import SEO from '../../components/common/Seo';
 import { graphql, Link } from 'gatsby';
 
 import styles from './index.module.css';
@@ -36,6 +37,7 @@ export default ({
   },
 }) => (
   <Layout>
+    <SEO title="Posts" />
     <section>
       <h2>Posts</h2>
       {edges.map(
