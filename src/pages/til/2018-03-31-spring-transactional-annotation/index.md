@@ -1,6 +1,7 @@
 ---
 title: "Spring @Transactional Annotation"
 description: "TIL how to write custom transactional methods on a CrudRepository."
+keywords: ["Spring", "@Transactional", "Annotation", "CrudRepository"]
 date: "2018-03-31"
 ---
 

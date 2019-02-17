@@ -37,7 +37,10 @@ export default ({
   },
 }) => (
   <Layout>
-    <SEO title="Posts" />
+    <SEO
+      title="Posts"
+      keywords={['Software', 'Developer', 'Tech', 'Blog', 'Posts', 'Articles']}
+    />
     <section>
       <h2>Posts</h2>
       {edges.map(

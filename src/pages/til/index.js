@@ -37,7 +37,17 @@ export default ({
   },
 }) => (
   <Layout>
-    <SEO title="TIL - Today I Learned" />
+    <SEO
+      title="TIL - Today I Learned"
+      keywords={[
+        'Software',
+        'Developer',
+        'Tech',
+        'Blog',
+        'TIL',
+        'Today I Learned',
+      ]}
+    />
     <h2>TIL - Today I Learned</h2>
     <section className={styles.tilContainer}>
       {edges.map(
