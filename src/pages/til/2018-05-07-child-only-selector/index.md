@@ -1,6 +1,7 @@
 ---
 title: "CSS :only-child Selector"
 description: "TIL how to use CSS :only-child selector"
+keywords: ["CSS", ":only-child", "selector"]
 date: "2018-05-07"
 ---
 

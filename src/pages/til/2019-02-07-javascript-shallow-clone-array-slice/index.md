@@ -1,6 +1,7 @@
 ---
 title: "Shallow Clone JS Array with Slice"
 description: "TIL how to use slice to shallow clone a JS Array"
+keywords: ["JS", "Javascript", "Array", "Shallow", "Clone", "Slice"]
 date: "2019-02-07"
 ---
 

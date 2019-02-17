@@ -14,6 +14,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        keywords
       }
     }
   }
@@ -23,7 +24,7 @@ export default ({
   location: { pathname },
   data: {
     markdownRemark: {
-      frontmatter: { title, description },
+      frontmatter: { title, description, keywords },
       html,
     },
   },
@@ -36,7 +37,7 @@ export default ({
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} keywords={keywords} />
       <div className={styles.container}>
         <h2 className={styles.postTitle}>{title}</h2>
         <p className={styles.postDescription}>{description}</p>

@@ -4,7 +4,18 @@ import Layout from '../components/layout';
 
 export default () => (
   <Layout>
-    <SEO />
+    <SEO
+      keywords={[
+        'Software',
+        'Developer',
+        'Tech',
+        'Blog',
+        'About',
+        'Wilfried',
+        'Willie',
+        'Barth',
+      ]}
+    />
     <section>
       <h2>Hey there!</h2>
       <p>

@@ -1,6 +1,7 @@
 ---
 title: "Preventing Mutation in Redux Reducers"
 description: "TIL how to prevent state mutations in redux reducers"
+keywords: ["Redux", "Reducer", "Mutation", "Object.assign"]
 date: "2017-05-11"
 ---
 

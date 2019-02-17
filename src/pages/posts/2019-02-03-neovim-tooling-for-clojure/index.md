@@ -1,6 +1,7 @@
 ---
 title: "Neovim Tooling for Clojure"
 description: "My current Neovim setup for editing Clojure"
+keywords: ["Vim", "Neovim", "Clojure"]
 date: "2019-02-03"
 ---
 
