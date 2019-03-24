@@ -1,6 +1,6 @@
 ---
 title: "Learning Clojure in 2019"
-description: "Why I think learning Clojure is worth my time (and maybe yours too!)."
+description: "Why I think learning Clojure is worth my time (and maybe yours too!)"
 keywords: ["Clojure", "Lisp", "Functional Programming"]
 date: "2018-12-23"
 ---

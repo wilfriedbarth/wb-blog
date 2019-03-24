@@ -24,6 +24,7 @@ module.exports = {
     },
     'gatsby-plugin-netlify',
     'gatsby-plugin-remove-serviceworker',
+    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-source-filesystem',
@@ -46,6 +47,12 @@ module.exports = {
           {
             resolve: 'gatsby-remark-prismjs',
             options: { classPrefix: 'language-' },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1000,
+            },
           },
         ],
       },

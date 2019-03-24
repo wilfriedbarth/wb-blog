@@ -1,7 +1,6 @@
 ---
 title: "PostgreSQL Copy Utility"
-description: "TIL how to copy a PostgreSQL table from
-  a remote server to a csv file on your local machine."
+description: "TIL how to copy a PostgreSQL table from a remote server to a csv file on your local machine"
 keywords: ["PSQL", "PostgreSQL", "Copy"]
 date: "2018-02-16"
 ---
