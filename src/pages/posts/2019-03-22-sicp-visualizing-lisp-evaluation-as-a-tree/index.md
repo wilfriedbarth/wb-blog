@@ -1,7 +1,7 @@
 ---
-title: "SICP: Visualizing Lisp Evaluation as a Tree of Expressions"
+title: "SICP: Visualizing Lisp Evaluation as a Tree"
 description: "Examining the tree-like nature of Lisp"
-keywords: ["SICP", "Structure", "Interpretation", "Computer", "Programs", "Lisp", "Scheme", "Tree", "Recursion", "Expression"]
+keywords: ["SICP", "Structure", "Interpretation", "Computer", "Programs", "Lisp", "Scheme", "Tree"]
 date: "2019-03-22"
 ---
 
@@ -114,9 +114,9 @@ right-to-left, evaluating expressions by indentation level as you go. Let's do t
 
 Pretty neat!
 
-### Visualizing Lisp Evaluation as a Tree of Expressions
+### Visualizing Lisp Evaluation as a Tree
 
-Ok now for the big reveal. Lisp evaluation is a tree of expressions! See the image below for a tree
+Ok now for the big reveal. Lisp evaluation can be visualized as a tree! See the image below for a tree
 representation of evaluation of the nested compound expression in prior section.
 
 ![Representation of a Nested Compound Expression](LispTreeDiagram.jpg)
