@@ -24,7 +24,7 @@ export default () => (
         working in the{' '}
         <a href="https://advertising.expedia.com/">Media Solutions</a> division.
         At work, I am hacking in Typescript, Java, and Scala these days. Outside
-        work, I am dabbling in functional languages such as Clojure and Haskell.
+        work, I am dabbling in Clojure, Scheme, and Kotlin.
       </p>
       <p>
         Drop me a line at{' '}
