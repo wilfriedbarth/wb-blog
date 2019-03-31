@@ -1,5 +1,5 @@
 ---
-title: "SICP: Visualizing Lisp Evaluation as a Tree"
+title: "SICP - Visualizing Lisp Evaluation as a Tree"
 description: "Examining the tree-like nature of Lisp"
 keywords: ["SICP", "Structure", "Interpretation", "Computer", "Programs", "Lisp", "Scheme", "Tree"]
 date: "2019-03-22"
