@@ -38,7 +38,6 @@ export default ({
 }) => (
   <Layout>
     <SEO
-      title="TIL - Today I Learned"
       keywords={[
         'Software',
         'Developer',
@@ -47,6 +46,7 @@ export default ({
         'TIL',
         'Today I Learned',
       ]}
+      title="TIL - Today I Learned"
     />
     <h2>TIL - Today I Learned</h2>
     <section className={styles.tilContainer}>
@@ -60,7 +60,7 @@ export default ({
         }) => (
           <article key={id}>
             <header>
-              <Link className={styles.tilLink} to={slug}>
+              <Link className={styles.tilLink} to={`/${slug}`}>
                 <h3 className={styles.tilTitle}>{title}</h3>
               </Link>
               <h5 className={styles.tilDate}>{date}</h5>
