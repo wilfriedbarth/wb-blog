@@ -38,8 +38,8 @@ export default ({
 }) => (
   <Layout>
     <SEO
-      title="Posts"
       keywords={['Software', 'Developer', 'Tech', 'Blog', 'Posts', 'Articles']}
+      title="Posts"
     />
     <section>
       <h2>Posts</h2>
@@ -53,7 +53,7 @@ export default ({
         }) => (
           <article key={id}>
             <header>
-              <Link className={styles.postLink} to={slug}>
+              <Link className={styles.postLink} to={`/${slug}`}>
                 <h3 className={styles.postTitle}>{title}</h3>
               </Link>
               <h5 className={styles.postDate}>{date}</h5>
