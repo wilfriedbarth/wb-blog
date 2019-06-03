@@ -31,13 +31,13 @@ futures, and options), there are some things I do not like:
 
 1) Too much syntax sugar. There are like 10 different ways to write a line of code that are all
 functionally equivalent.
-2) Flexibility. I can write object-oriented code in Scala. I can write functional code in
-Scala. I can mix the two, with potentially disastrous results. While some may appreciate flexibility,
-I believe it is a double-edged sword. With flexibility, software developers have so many opinions on
-what "idiomatic" Scala code is. Not a fan. I prefer opinionated languages where there is set of
-conventions that the community adopts.
-3) Slow compile times. I hate waiting a minute for the project to compile after I have made a code
-change.
+2) Mixed object-oriented / functional paradigm. I can write object-oriented code in Scala. I can
+write functional code in Scala. I can mix the two, with potentially disastrous results. While some
+may appreciate this flexibility, I believe it is a double-edged sword. In Clojure, the functional
+paradigm takes precedence. Mutability is adopted in a safe, contained manner when there are
+performance benefits to be gained.
+3) Slow compile times. I hate waiting a minute for sbt to compile the project after I have made a
+code change.
 
 With Clojure, the community strives for simplicity, consistency, and clarity. With the Clojure REPL
 and the ability to interact with live programs, experimentation is encouraged. I think I will grow
