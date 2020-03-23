@@ -1,8 +1,8 @@
 ---
-title: "Learning Clojure in 2019"
-description: "Why I think learning Clojure is worth my time (and maybe yours too!)"
-keywords: ["Clojure", "Lisp", "Functional Programming"]
-date: "2018-12-23"
+title: 'Learning Clojure in 2019'
+description: 'Why I think learning Clojure is worth my time (and maybe yours too!)'
+keywords: ['Clojure', 'Lisp', 'Functional Programming']
+date: '2018-12-23'
 ---
 
 In 2019, for fun I've decided to learn Clojure as my first functional programming language.
@@ -29,15 +29,15 @@ ClojureScript)). Clojure as a result is powerful, while being practical and prag
 I'm currently programming in Scala at work. Although there are some idioms I do like (pattern matching,
 futures, and options), there are some things I do not like:
 
-1) Too much syntax sugar. There are like 10 different ways to write a line of code that are all
-functionally equivalent.
-2) Mixed object-oriented / functional paradigm. I can write object-oriented code in Scala. I can
-write functional code in Scala. I can mix the two, with potentially disastrous results. While some
-may appreciate this flexibility, I believe it is a double-edged sword. In Clojure, the functional
-paradigm takes precedence. Mutability is adopted in a safe, contained manner when there are
-performance benefits to be gained.
-3) Slow compile times. I hate waiting a minute for sbt to compile the project after I have made a
-code change.
+1. Too much syntax sugar. There are like 10 different ways to write a line of code that are all
+   functionally equivalent.
+2. Mixed object-oriented / functional paradigm. I can write object-oriented code in Scala. I can
+   write functional code in Scala. I can mix the two, with potentially disastrous results. While some
+   may appreciate this flexibility, I believe it is a double-edged sword. In Clojure, the functional
+   paradigm takes precedence. Mutability is adopted in a safe, contained manner when there are
+   performance benefits to be gained.
+3. Slow compile times. I hate waiting a minute for sbt to compile the project after I have made a
+   code change.
 
 With Clojure, the community strives for simplicity, consistency, and clarity. With the Clojure REPL
 and the ability to interact with live programs, experimentation is encouraged. I think I will grow
@@ -53,11 +53,12 @@ Clojure + machine learning? Could be fun!
 
 Want to learn Clojure with me? I will be posting more about Clojure in the coming year, so stay tuned!
 
-
-[^1]: If you'd like to learn more about Lisp, I highly suggest reading Paul Graham's essays and
+[^1]:
+  If you'd like to learn more about Lisp, I highly suggest reading Paul Graham's essays and
   books on Lisp (["Beating The Averages"](http://paulgraham.com/avg.html),
   ["What Made Lisp Different"](http://www.paulgraham.com/diff.html), and
   ["On Lisp"](http://www.paulgraham.com/onlisptext.html)).
 
-[^2]: If you'd like to learn more about Clojure, I highly recommend listening to
+[^2]:
+  If you'd like to learn more about Clojure, I highly recommend listening to
   [Rich Hickey's talks](https://www.youtube.com/results?search_query=rich+hickey+talks).

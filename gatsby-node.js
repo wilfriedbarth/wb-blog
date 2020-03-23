@@ -39,7 +39,7 @@ const createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(result => {
+    `).then((result) => {
       if (result.errors) {
         reject(result.errors);
       }

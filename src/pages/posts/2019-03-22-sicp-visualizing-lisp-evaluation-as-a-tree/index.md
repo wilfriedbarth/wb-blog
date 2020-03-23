@@ -1,8 +1,18 @@
 ---
-title: "SICP - Visualizing Lisp Evaluation as a Tree"
-description: "Examining the tree-like nature of Lisp"
-keywords: ["SICP", "Structure", "Interpretation", "Computer", "Programs", "Lisp", "Scheme", "Tree"]
-date: "2019-03-22"
+title: 'SICP - Visualizing Lisp Evaluation as a Tree'
+description: 'Examining the tree-like nature of Lisp'
+keywords:
+  [
+    'SICP',
+    'Structure',
+    'Interpretation',
+    'Computer',
+    'Programs',
+    'Lisp',
+    'Scheme',
+    'Tree',
+  ]
+date: '2019-03-22'
 ---
 
 As part of my learning journey with Clojure, I've decided to take a bit of a detour and go through
@@ -48,7 +58,7 @@ familar with them.
 ```
 
 Now we're getting into some Lisp syntax! Compound expressions in Lisp are formed by combining a
-primitive procedure (an *operator*) with a number of primitive values (*operands*) enclosed in parentheses.
+primitive procedure (an _operator_) with a number of primitive values (_operands_) enclosed in parentheses.
 The value of the expression is obtained by applying the operator to the values of the operands.
 
 So in the first example, the plus operator (`+`) is being applied to the values of the operands
@@ -56,13 +66,13 @@ So in the first example, the plus operator (`+`) is being applied to the values 
 the values of the operands.
 
 As you may have noticed, `+ 1 2 3` is not typically how we notate addition. Lisp follows the
-convention of "operator first, operands last", also known as *prefix notation*. By contrast, the
-way we normally notate addition `1 + 2 + 3` is known as *infix notation*.
+convention of "operator first, operands last", also known as _prefix notation_. By contrast, the
+way we normally notate addition `1 + 2 + 3` is known as _infix notation_.
 
 This may be weird at first, but there are good reasons for why Lisp adopted prefix notation. First,
 prefix notation allows an operator to take an arbitrary number of arguments (i.e. the plus operator
 `+` can take any number of numbers). Second, prefix notation with parentheses naturally allows
-*nesting* of expressions, wherein a compound expression could contain expressions that are also
+_nesting_ of expressions, wherein a compound expression could contain expressions that are also
 compound expressions.
 
 The second example is a nested compound expression. Evaluation of the nested compound expression
@@ -124,7 +134,7 @@ representation of evaluation of the nested compound expression in prior section.
 One can see that as one progresses up the levels of the tree, each successive evaluation reduces
 one or more compound expressions, causing the calculated values to rise upwards. Eventually, we
 reach the root node of the tree, which is the final result of the entire nested compound expression.
-In general, this process is known as *tree accumulation*.
+In general, this process is known as _tree accumulation_.
 
 And it gets even better! Looking at the pretty-printed nested compound expression, we can see that
 the indentation level corresponds with the depth of the tree! No indentation corresponds to a depth
