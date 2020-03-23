@@ -1,8 +1,19 @@
 ---
-title: "SICP - Applicative vs Normal Order Evaluation"
-description: "Learn the differences between applicative and normal order evaluation"
-keywords: ["SICP", "Structure", "Interpretation", "Computer", "Programs", "Applicative", "Normal", "Order", "Evaluation"]
-date: "2019-03-30"
+title: 'SICP - Applicative vs Normal Order Evaluation'
+description: 'Learn the differences between applicative and normal order evaluation'
+keywords:
+  [
+    'SICP',
+    'Structure',
+    'Interpretation',
+    'Computer',
+    'Programs',
+    'Applicative',
+    'Normal',
+    'Order',
+    'Evaluation',
+  ]
+date: '2019-03-30'
 ---
 
 Continuing with SICP (sections 1.1.4 - 1.1.5), let's investigate the differences between applicative
@@ -31,13 +42,13 @@ Let's take the examples from the book for defining the functions `square`, `sum-
 ```
 
 All very straightforward. Now let's evaluate `(f 5)`. There are two main ways we could evaluate
-`(f 5)`, either *applicative order evaluation* or *normal order evaluation*. We will explore
+`(f 5)`, either _applicative order evaluation_ or _normal order evaluation_. We will explore
 applicative order evaluation first.
 
 ### Applicative Order Evaluation
 
-Applicative order evaluation is described in SICP as the *evaluate the arguments and then apply*
-method. As I understand it, we begin evaluation by substituting arguments and then *eagerly*
+Applicative order evaluation is described in SICP as the _evaluate the arguments and then apply_
+method. As I understand it, we begin evaluation by substituting arguments and then _eagerly_
 evaluate arguments before applying functions.
 
 ```scheme
@@ -59,14 +70,14 @@ evaluate arguments before applying functions.
 ```
 
 The Scheme interpreter uses applicative order evaluation. However, it should be noted that the
-*subtitution model* for applicative order evaluation (what we used above) is an approximation of
+_subtitution model_ for applicative order evaluation (what we used above) is an approximation of
 the complex model that the interpreter actually uses to execute applicative order evaluation.
 
 ### Normal Order Evaluation
 
-Normal order evaluation is described in SICP as the *fully expand and then reduce* method. As I
+Normal order evaluation is described in SICP as the _fully expand and then reduce_ method. As I
 understand it, we begin evaluation by substituting arguments and then fully expand functions before
-*lazily* evaluating arguments / reducing the functions.
+_lazily_ evaluating arguments / reducing the functions.
 
 ```scheme
 (f 5); Substitute

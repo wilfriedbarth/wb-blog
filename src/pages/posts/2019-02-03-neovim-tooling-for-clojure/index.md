@@ -1,8 +1,8 @@
 ---
-title: "Neovim Tooling for Clojure"
-description: "My current Neovim setup for editing Clojure"
-keywords: ["Vim", "Neovim", "Clojure"]
-date: "2019-02-03"
+title: 'Neovim Tooling for Clojure'
+description: 'My current Neovim setup for editing Clojure'
+keywords: ['Vim', 'Neovim', 'Clojure']
+date: '2019-02-03'
 ---
 
 This past Saturday I devoted an afternoon to configuring my Neovim setup for Clojure. Here are the

@@ -1,8 +1,8 @@
 ---
-title: "Preventing Mutation in Redux Reducers"
-description: "TIL how to prevent state mutations in redux reducers"
-keywords: ["Redux", "Reducer", "Mutation", "Object.assign"]
-date: "2017-05-11"
+title: 'Preventing Mutation in Redux Reducers'
+description: 'TIL how to prevent state mutations in redux reducers'
+keywords: ['Redux', 'Reducer', 'Mutation', 'Object.assign']
+date: '2017-05-11'
 ---
 
 The other day I was working on a React/Redux project when I discovered that
@@ -18,6 +18,7 @@ properties of the given source objects, copy them all to the target object,
 and return the target object.
 
 #### object-assign-succeeds.js
+
 ```javascript
 let obj1 = { a: 1, b: 2, c: 3 };
 let obj2 = { c: 4, d: 5, e: 6 };
@@ -36,6 +37,7 @@ In the context of a Redux reducer, I often find myself applying `Object.assign()
 to create the new state that the reducer will return.
 
 #### reducer-succeeds.js
+
 ```javascript
 import { ACTION1 } from '../actions/action-types.js';
 
@@ -66,8 +68,9 @@ is more complex and you have a couple properties referencing other objects.
 I found it very helpful in understanding Object.assign() better).
 
 #### object-assign-fails.js
+
 ```javascript
-let obj1 = { a: 0, b: { c: 0 }};
+let obj1 = { a: 0, b: { c: 0 } };
 let obj2 = Object.assign({}, obj1);
 console.log(obj2); // { a: 0, b: { c: 0 }}
 
@@ -93,6 +96,7 @@ regardless of whether I make changes to the property `c` from `obj1` or `obj2`,
 both these changes affect the same object in memory.
 
 #### reducer-fails.js
+
 ```javascript
 import { ACTION1 } from '../actions/action-types.js';
 
@@ -133,7 +137,7 @@ my new object.
 As a rule, if the payload of my action will alter
 certain properties of the state and the state is not too complex,
 I will use `Object.assign()` to return a new object with those properties
-overwritten with the payload of my action. I refer to this as *front-loading*
+overwritten with the payload of my action. I refer to this as _front-loading_
 changes before the new object is created.
 
 ### Alternative Solutions to Object.assign()
@@ -147,10 +151,11 @@ One naive solution is to use `JSON.parse` and `JSON.stringify` to deeply clone t
 Note this only works if your objects do not have any functions.
 
 #### json-deep-clone.js
+
 ```javascript
-let obj1 = { a: 0, b: { c: 0 }};
+let obj1 = { a: 0, b: { c: 0 } };
 let obj2 = JSON.parse(JSON.stringify(obj1));
-obj2.a = 1
+obj2.a = 1;
 obj2.b.c = 1;
 console.log(obj1); // { a: 0, b: { c: 0 }};
 console.log(obj2); // { a: 1, b: { c: 1 }};
@@ -160,17 +165,18 @@ Or one could use a utility library like lodash to deeply clone the object. This
 is the method I prefer.
 
 #### lodash-deep-clone.js
+
 ```javascript
-let obj1 = { a: 0, b: { c: 0 }};
+let obj1 = { a: 0, b: { c: 0 } };
 let obj2 = _.cloneDeep(obj1);
-obj2.a = 1
+obj2.a = 1;
 obj2.b.c = 1;
 console.log(obj1); // { a: 0, b: { c: 0 }};
 console.log(obj2); // { a: 1, b: { c: 1 }};
 ```
 
 Regardless of which method you choose (JSON or lodash), the object is cloned
-first before changes are implemented. I refer to this as *back-loading*
+first before changes are implemented. I refer to this as _back-loading_
 changes after the new object is created.
 
 ### Summary
@@ -179,7 +185,7 @@ To summarize, with Redux reducers, make sure you decouple your new state from
 your old state. To avoid mutations, there should not be any references between
 your new state and old state.
 
-Whether you choose to *front-load* state changes via Object.assign() or *back-load*
+Whether you choose to _front-load_ state changes via Object.assign() or _back-load_
 state changes via deep cloning is a personal choice. I usually choose the method
 most appropriate to the situation (`Object.assign()` for simple objects, deep
 cloning for nested objects).

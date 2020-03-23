@@ -1,8 +1,8 @@
 ---
-title: "CSS :only-child Selector"
-description: "TIL how to use CSS :only-child selector"
-keywords: ["CSS", ":only-child", "selector"]
-date: "2018-05-07"
+title: 'CSS :only-child Selector'
+description: 'TIL how to use CSS :only-child selector'
+keywords: ['CSS', ':only-child', 'selector']
+date: '2018-05-07'
 ---
 
 Today I learned how useful the `:only-child` selector is when applying
@@ -12,6 +12,7 @@ first item and the bottom of the last item in the list. It would look
 something like this:
 
 #### HTML
+
 ```html
 <ul>
   <li>Item 1</li>
@@ -21,6 +22,7 @@ something like this:
 ```
 
 #### CSS
+
 ```css
 li {
   background-color: purple;
@@ -43,6 +45,7 @@ As you might imagine, this selector only applies when there is a single
 child. So in that scenario, we'd have:
 
 #### HTML
+
 ```html
 <ul>
   <li>Item 1</li>
@@ -50,6 +53,7 @@ child. So in that scenario, we'd have:
 ```
 
 #### CSS
+
 ```css
 li {
   background-color: purple;

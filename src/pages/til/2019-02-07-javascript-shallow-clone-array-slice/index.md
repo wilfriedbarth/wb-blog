@@ -1,8 +1,8 @@
 ---
-title: "Shallow Clone JS Array with Slice"
-description: "TIL how to use slice to shallow clone a JS Array"
-keywords: ["JS", "Javascript", "Array", "Shallow", "Clone", "Slice"]
-date: "2019-02-07"
+title: 'Shallow Clone JS Array with Slice'
+description: 'TIL how to use slice to shallow clone a JS Array'
+keywords: ['JS', 'Javascript', 'Array', 'Shallow', 'Clone', 'Slice']
+date: '2019-02-07'
 ---
 
 Today I ran into a bug where I was unintentionally mutating an array
@@ -13,6 +13,7 @@ off to another function to avoid this mutation.
 To my delight, I discovered a nifty way to clone an array. Use `slice`!
 
 #### Using slice to clone an array
+
 ```javascript
 const arr = [{ firstName: 'Willie', lastName: 'Barth' }];
 const clonedArr = arr.slice(0);
@@ -35,7 +36,6 @@ with the prior example and see what happens if I modify one of the objects in th
 #### A sliced array is only a shallow clone
 
 ```javascript
-
 arr[0].firstName = 'Genghis';
 arr[0].lastName = 'Khan';
 

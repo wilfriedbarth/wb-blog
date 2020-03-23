@@ -1,13 +1,13 @@
 ---
-title: "AWS Summit Chicago 2019"
-description: "What I learned at AWS Summit Chicago 2019"
-keywords: ["AWS", "Summit", "Chicago", "2019"]
-date: "2019-05-31"
+title: 'AWS Summit Chicago 2019'
+description: 'What I learned at AWS Summit Chicago 2019'
+keywords: ['AWS', 'Summit', 'Chicago', '2019']
+date: '2019-05-31'
 ---
 
-I attended three breakout sessions at AWS Summit Chicago 2019: *"SEC203: AWS identity services:
-Enabling and securing your cloud journey"*, *"MAD302: Managing microservices using AWS App Mesh"*,
-and *"ADB207: What's new in Amazon RDS"*.
+I attended three breakout sessions at AWS Summit Chicago 2019: _"SEC203: AWS identity services:
+Enabling and securing your cloud journey"_, _"MAD302: Managing microservices using AWS App Mesh"_,
+and _"ADB207: What's new in Amazon RDS"_.
 
 ### SEC203 - AWS Identity Services
 
@@ -95,13 +95,13 @@ communication control and observability as **a dedicated layer outside of the ap
 
 AWS App Mesh has a number of benefits over libraries or app code:
 
-1) Generate uniform logs, metrics, and traces across services. For logging, you can implement HTTP
-access logging, Amazon CloudWatch logs, or container logs. For metrics, CloudWatch metrics, StatsD,
-or Prometheus. For tracing, AWS X-Ray or another Envoy-supported tracing driver.
-2) Load balance traffic across services.
-3) Shift traffic between deployments.
-4) Decouple service teams.
-5) Minimize impact to application code.
+1. Generate uniform logs, metrics, and traces across services. For logging, you can implement HTTP
+   access logging, Amazon CloudWatch logs, or container logs. For metrics, CloudWatch metrics, StatsD,
+   or Prometheus. For tracing, AWS X-Ray or another Envoy-supported tracing driver.
+2. Load balance traffic across services.
+3. Shift traffic between deployments.
+4. Decouple service teams.
+5. Minimize impact to application code.
 
 At the top of the list for me: less work to get logs, metrics, and tracing up and running across your
 services! I am so sick of having to implement logging / metrics / tracing infrastructure for different
@@ -112,14 +112,14 @@ into its own layer and scale it across services is a huge win.
 
 Not too much new for Amazon RDS, but learned a couple things:
 
-1) Use General purpose (gp2) SSD for development / test environments. General purpose SSD volume
-balances price and performance for a variety of workloads.
-2) Use Provisioned IOPS (io1) SSD for production environment. Provisioned IOPS SSD volume is for
-mission-critical low-latency or high-throughput workloads.
-3) Don't use Magnetic storage. Why would you when you have SSD?
-4) Can monitor RDS databases via CloudWatch metrics and Amazon RDS Performance Insights. Amazon RDS
-Performance Insights is particularly useful in identifying database bottlenecks, since you can identify
-the database loads for specific SQL queries.
-5) You can stop and start your databases on a schedule! This is useful for development / test environments,
-which you typically don't access on weekends. You can stop your databases during those times and only
-pay for storage. Yay for reducing AWS costs!
+1. Use General purpose (gp2) SSD for development / test environments. General purpose SSD volume
+   balances price and performance for a variety of workloads.
+2. Use Provisioned IOPS (io1) SSD for production environment. Provisioned IOPS SSD volume is for
+   mission-critical low-latency or high-throughput workloads.
+3. Don't use Magnetic storage. Why would you when you have SSD?
+4. Can monitor RDS databases via CloudWatch metrics and Amazon RDS Performance Insights. Amazon RDS
+   Performance Insights is particularly useful in identifying database bottlenecks, since you can identify
+   the database loads for specific SQL queries.
+5. You can stop and start your databases on a schedule! This is useful for development / test environments,
+   which you typically don't access on weekends. You can stop your databases during those times and only
+   pay for storage. Yay for reducing AWS costs!
