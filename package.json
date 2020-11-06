@@ -1,10 +1,10 @@
 {
   "author": "Wilfried Barth <wilfried.barth.prof@gmail.com>",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "1.2.29",
-    "@fortawesome/free-brands-svg-icons": "5.13.1",
-    "@fortawesome/free-solid-svg-icons": "5.13.1",
-    "@fortawesome/react-fontawesome": "0.1.11",
+    "@fortawesome/fontawesome-svg-core": "1.2.32",
+    "@fortawesome/free-brands-svg-icons": "5.15.1",
+    "@fortawesome/free-solid-svg-icons": "5.15.1",
+    "@fortawesome/react-fontawesome": "0.1.12",
     "disqus-react": "1.0.9",
     "gatsby": "2.23.20",
     "gatsby-plugin-catch-links": "2.3.10",
