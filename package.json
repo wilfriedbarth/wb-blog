@@ -4,7 +4,7 @@
     "@fortawesome/fontawesome-svg-core": "1.2.32",
     "@fortawesome/free-brands-svg-icons": "5.15.1",
     "@fortawesome/free-solid-svg-icons": "5.15.1",
-    "@fortawesome/react-fontawesome": "0.1.12",
+    "@fortawesome/react-fontawesome": "0.1.13",
     "disqus-react": "1.0.10",
     "gatsby": "2.27.0",
     "gatsby-plugin-catch-links": "2.5.0",
