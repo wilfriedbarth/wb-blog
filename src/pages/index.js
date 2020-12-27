@@ -23,8 +23,8 @@ export default () => (
         <a href="https://www.expediagroup.com/">Expedia Group</a> in Chicago,
         working in the{' '}
         <a href="https://advertising.expedia.com/">Media Solutions</a> division.
-        At work, I am hacking in Typescript, Java, and Kotlin. Outside work, I
-        am dabbling in Clojure and Scheme.
+        At work, I am hacking away in JavaScript, Typescript, Java, and Kotlin.
+        At home, I am dabbling in Clojure and Scheme.
       </p>
       <p>
         Drop me a line at{' '}
