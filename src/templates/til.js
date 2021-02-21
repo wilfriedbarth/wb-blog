@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import SEO from '../components/common/Seo';
-import Utterances from '../components/common/Utterances';
+import Comments from '../components/common/Comments';
 import Layout from '../components/layout';
 import styles from './til.module.css';
 
@@ -35,7 +35,8 @@ const TIL = ({
       <p className={styles.tilDescription}>{description}</p>
       <hr className={styles.tilDivider} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Utterances />
+      <hr className={styles.tilDivider} />
+      <Comments />
     </div>
   </Layout>
 );

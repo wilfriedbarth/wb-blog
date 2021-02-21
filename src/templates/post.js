@@ -2,7 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import Utterances from '../components/common/Utterances';
+import Comments from '../components/common/Comments';
 import SEO from '../components/common/Seo';
 import styles from './post.module.css';
 
@@ -35,7 +35,8 @@ const Post = ({
       <p className={styles.postDescription}>{description}</p>
       <hr className={styles.postDivider} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <Utterances />
+      <hr className={styles.postDivider} />
+      <Comments />
     </div>
   </Layout>
 );
