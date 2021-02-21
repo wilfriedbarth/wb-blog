@@ -31,7 +31,7 @@ export const query = graphql`
   }
 `;
 
-export default ({
+const Index = ({
   data: {
     allMarkdownRemark: { edges },
   },
@@ -67,3 +67,5 @@ export default ({
     </section>
   </Layout>
 );
+
+export default Index;

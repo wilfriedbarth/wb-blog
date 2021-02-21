@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { DiscussionEmbed } from 'disqus-react';
 
 import Layout from '../components/layout';
+import Utterances from '../components/common/Utterances';
 import SEO from '../components/common/Seo';
 import styles from './post.module.css';
 
@@ -20,31 +20,24 @@ export const query = graphql`
   }
 `;
 
-export default ({
-  location: { pathname },
+const Post = ({
   data: {
     markdownRemark: {
       frontmatter: { title, description, keywords },
       html,
     },
   },
-}) => {
-  const disqusConfig = {
-    url: `https://www.wilfriedbarth.com${pathname}`,
-    identifier: pathname,
-    title,
-  };
+}) => (
+  <Layout>
+    <SEO description={description} keywords={keywords} title={title} />
+    <div className={styles.container}>
+      <h2 className={styles.postTitle}>{title}</h2>
+      <p className={styles.postDescription}>{description}</p>
+      <hr className={styles.postDivider} />
+      <div dangerouslySetInnerHTML={{ __html: html }} />
+      <Utterances />
+    </div>
+  </Layout>
+);
 
-  return (
-    <Layout>
-      <SEO title={title} description={description} keywords={keywords} />
-      <div className={styles.container}>
-        <h2 className={styles.postTitle}>{title}</h2>
-        <p className={styles.postDescription}>{description}</p>
-        <hr className={styles.postDivider} />
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-        <DiscussionEmbed config={disqusConfig} shortname="wbarth" />
-      </div>
-    </Layout>
-  );
-};
+export default Post;

@@ -2,7 +2,7 @@ import React from 'react';
 import SEO from '../components/common/Seo';
 import Layout from '../components/layout';
 
-export default () => (
+const Index = () => (
   <Layout>
     <SEO
       keywords={[
@@ -38,3 +38,5 @@ export default () => (
     </section>
   </Layout>
 );
+
+export default Index;
