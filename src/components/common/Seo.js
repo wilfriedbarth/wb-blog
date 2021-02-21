@@ -18,10 +18,8 @@ const SEO = ({ description, keywords, lang, title }) => (
       const metaDescription = description || data.site.siteMetadata.description;
       return (
         <Helmet
-          htmlAttributes={{ lang }}
           defaultTitle={data.site.siteMetadata.title}
-          title={title}
-          titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+          htmlAttributes={{ lang }}
           meta={[
             {
               name: 'description',
@@ -35,20 +33,9 @@ const SEO = ({ description, keywords, lang, title }) => (
                 }
               : [],
           )}
-        >
-          <script
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          ></script>
-          <script>
-            {`
-              (adsbygoogle = window.adsbygoogle || []).push({
-                google_ad_client: "ca-pub-7274049254616874",
-                enable_page_level_ads: true
-              });
-            `}
-          </script>
-        </Helmet>
+          title={title}
+          titleTemplate={`${data.site.siteMetadata.title} - %s`}
+        />
       );
     }}
   />
