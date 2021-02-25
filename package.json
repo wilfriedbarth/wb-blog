@@ -5,7 +5,7 @@
     "@fortawesome/free-brands-svg-icons": "5.15.2",
     "@fortawesome/free-solid-svg-icons": "5.15.2",
     "@fortawesome/react-fontawesome": "0.1.14",
-    "gatsby": "2.32.7",
+    "gatsby": "2.32.8",
     "gatsby-plugin-catch-links": "2.10.0",
     "gatsby-plugin-google-analytics": "2.11.0",
     "gatsby-plugin-netlify": "2.11.0",
