@@ -10,7 +10,7 @@ const Comments = () => {
       const scriptEl = document.createElement('script');
       scriptEl.setAttribute('async', true);
       scriptEl.setAttribute('crossorigin', 'anonymous');
-      scriptEl.setAttribute('issue-term', 'title');
+      scriptEl.setAttribute('issue-term', 'pathname');
       scriptEl.setAttribute('repo', 'wilfriedbarth/wb-blog-comments');
       scriptEl.setAttribute('src', 'https://utteranc.es/client.js');
       scriptEl.setAttribute('theme', 'github-light');
