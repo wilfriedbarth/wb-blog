@@ -20,11 +20,8 @@ const Index = () => (
       <h2>Hey there!</h2>
       <p>
         I am a software engineer at{' '}
-        <a href="https://www.expediagroup.com/">Expedia Group</a> in Chicago,
-        working in the{' '}
-        <a href="https://advertising.expedia.com/">Media Solutions</a> division.
-        At work, I am hacking away in JavaScript, Typescript, Java, and Kotlin.
-        At home, I am dabbling in Clojure and Scheme.
+        <a href="https://www.capitalone.com/">Capital One</a> in Chicago.
+        At work, I am hacking away in JavaScript, Typescript, and Golang.
       </p>
       <p>
         Drop me a line at{' '}
