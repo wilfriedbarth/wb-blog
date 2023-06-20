@@ -28,9 +28,9 @@ const SEO = ({ description, keywords, lang, title }) => (
           ].concat(
             keywords && keywords.length > 0
               ? {
-                  name: 'keywords',
-                  content: keywords.join(', '),
-                }
+                name: 'keywords',
+                content: keywords.join(', '),
+              }
               : [],
           )}
           title={title}

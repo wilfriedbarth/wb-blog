@@ -19,9 +19,8 @@ const Index = () => (
     <section>
       <h2>Hey there!</h2>
       <p>
-        I am a software engineer at{' '}
-        <a href="https://www.capitalone.com/">Capital One</a> in Chicago.
-        At work, I am hacking away in JavaScript, Typescript, and Golang.
+        I am a software engineer hacking away in JavaScript, Typescript, and
+        Golang.
       </p>
       <p>
         Drop me a line at{' '}
