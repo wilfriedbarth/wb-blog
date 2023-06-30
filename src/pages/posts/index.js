@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../../components/layout';
-import SEO from '../../components/common/Seo';
 import { graphql, Link } from 'gatsby';
+import React from 'react';
+import SEO from '../../components/common/Seo';
+import Layout from '../../components/layout';
 
 import styles from './index.module.css';
 
