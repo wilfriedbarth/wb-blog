@@ -4,7 +4,7 @@ import { graphql } from 'gatsby';
 import SEO from '../components/common/Seo';
 import Comments from '../components/common/Comments';
 import Layout from '../components/layout';
-import styles from './til.module.css';
+import { tilTitle, tilDescription, tilDivider } from './til.module.css';
 
 /* eslint-disable-next-line */
 export const query = graphql`
@@ -30,12 +30,12 @@ const TIL = ({
 }) => (
   <Layout>
     <SEO description={description} keywords={keywords} title={title} />
-    <div className={styles.container}>
-      <h2 className={styles.tilTitle}>{title}</h2>
-      <p className={styles.tilDescription}>{description}</p>
-      <hr className={styles.tilDivider} />
+    <div>
+      <h2 className={tilTitle}>{title}</h2>
+      <p className={tilDescription}>{description}</p>
+      <hr className={tilDivider} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <hr className={styles.tilDivider} />
+      <hr className={tilDivider} />
       <Comments />
     </div>
   </Layout>

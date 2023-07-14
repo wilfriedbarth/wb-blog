@@ -3,14 +3,14 @@ import Layout from '../../components/layout';
 import SEO from '../../components/common/Seo';
 import { graphql, Link } from 'gatsby';
 
-import styles from './index.module.css';
+import { tilContainer, tilLink, tilTitle, tilDate } from './index.module.css';
 
 /* eslint-disable-next-line */
 export const query = graphql`
   query tilIndexQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "til" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       totalCount
       edges {
@@ -49,7 +49,7 @@ const Index = ({
       title="TIL - Today I Learned"
     />
     <h2>TIL - Today I Learned</h2>
-    <section className={styles.tilContainer}>
+    <section className={tilContainer}>
       {edges.map(
         ({
           node: {
@@ -60,10 +60,10 @@ const Index = ({
         }) => (
           <article key={id}>
             <header>
-              <Link className={styles.tilLink} to={`/${slug}`}>
-                <h3 className={styles.tilTitle}>{title}</h3>
+              <Link className={tilLink} to={`/${slug}`}>
+                <h3 className={tilTitle}>{title}</h3>
               </Link>
-              <h5 className={styles.tilDate}>{date}</h5>
+              <h5 className={tilDate}>{date}</h5>
             </header>
             <main>
               <p>{description}</p>

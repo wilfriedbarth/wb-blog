@@ -4,7 +4,12 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Comments from '../components/common/Comments';
 import SEO from '../components/common/Seo';
-import styles from './post.module.css';
+import {
+  container,
+  postTitle,
+  postDescription,
+  postDivider,
+} from './post.module.css';
 
 /* eslint-disable-next-line */
 export const query = graphql`
@@ -30,12 +35,12 @@ const Post = ({
 }) => (
   <Layout>
     <SEO description={description} keywords={keywords} title={title} />
-    <div className={styles.container}>
-      <h2 className={styles.postTitle}>{title}</h2>
-      <p className={styles.postDescription}>{description}</p>
-      <hr className={styles.postDivider} />
+    <div>
+      <h2 className={postTitle}>{title}</h2>
+      <p className={postDescription}>{description}</p>
+      <hr className={postDivider} />
       <div dangerouslySetInnerHTML={{ __html: html }} />
-      <hr className={styles.postDivider} />
+      <hr className={postDivider} />
       <Comments />
     </div>
   </Layout>

@@ -7,12 +7,27 @@ module.exports = {
   plugins: [
     'gatsby-plugin-catch-links',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
-        anonymize: true,
-        head: true,
-        respectDNT: true,
-        trackingId: process.env.GA_TRACKING_ID,
+        trackingIds: ['GA-TRACKING_ID'],
+        gtagConfig: {
+          optimize_id: 'OPT_CONTAINER_ID',
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: false,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
+          // Defaults to https://www.googletagmanager.com
+          origin: 'https://www.wilfriedbarth.com',
+          // Delays processing pageview events on route update (in milliseconds)
+          delayOnRouteUpdate: 0,
+        },
       },
     },
     'gatsby-plugin-react-helmet',
