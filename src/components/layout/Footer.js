@@ -3,11 +3,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import styles from './Footer.module.css';
+import { footer, socialMedia, copyright } from './Footer.module.css';
 
 const Footer = () => (
-  <footer className={styles.footer}>
-    <ul className={styles.socialMedia}>
+  <footer className={footer}>
+    <ul className={socialMedia}>
       <li>
         <a href="mailto:wilfried.barth.prof@gmail.com">
           <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" />
@@ -24,9 +24,7 @@ const Footer = () => (
         </a>
       </li>
     </ul>
-    <small className={styles.copyright}>
-      &copy; {new Date().getFullYear()} Wilfried Barth
-    </small>
+    <small>&copy; {new Date().getFullYear()} Wilfried Barth</small>
   </footer>
 );
 

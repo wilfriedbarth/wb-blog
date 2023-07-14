@@ -2,21 +2,22 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import logo from './WB.jpg';
-import styles from './Header.module.css';
+import {
+  header,
+  logoCss,
+  taglineHeaderLink,
+  taglineHeader,
+  taglineSummary,
+} from './Header.module.css';
 
 const Header = () => (
-  <header className={styles.header}>
-    <img alt="logo" className={styles.logo} src={logo} />
-    <div className={styles.tagline}>
-      <Link className={styles.taglineHeaderLink} to="/">
-        <h2 className={styles.taglineHeader}>Wilfried Barth</h2>
+  <header className={header}>
+    <img alt="logo" className={logoCss} src={logo} />
+    <div>
+      <Link className={taglineHeaderLink} to="/">
+        <h2 className={taglineHeader}>Wilfried Barth</h2>
       </Link>
-      <p className={styles.taglineSummary}>
-        Software Engineer @{' '}
-        <a className={styles.expediaLink} href="https://www.expediagroup.com/">
-          Expedia Group
-        </a>
-      </p>
+      <p className={taglineSummary}>Software Engineer</p>
     </div>
   </header>
 );

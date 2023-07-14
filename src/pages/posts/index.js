@@ -3,14 +3,14 @@ import React from 'react';
 import SEO from '../../components/common/Seo';
 import Layout from '../../components/layout';
 
-import styles from './index.module.css';
+import { postLink, postTitle, postDate } from './index.module.css';
 
 /* eslint-disable-next-line */
 export const query = graphql`
   query postsIndexQuery {
     allMarkdownRemark(
       filter: { fields: { collection: { eq: "posts" } } }
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
     ) {
       totalCount
       edges {
@@ -53,10 +53,10 @@ const Index = ({
         }) => (
           <article key={id}>
             <header>
-              <Link className={styles.postLink} to={`/${slug}`}>
-                <h3 className={styles.postTitle}>{title}</h3>
+              <Link className={postLink} to={`/${slug}`}>
+                <h3 className={postTitle}>{title}</h3>
               </Link>
-              <h5 className={styles.postDate}>{date}</h5>
+              <h5 className={postDate}>{date}</h5>
             </header>
             <main>
               <p>{description}</p>
